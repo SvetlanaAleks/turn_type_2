@@ -14,49 +14,29 @@ function loadApp() {
 
   flipbook.turn({
     // Magazine width
-
     width: 922,
-
     // Magazine height
-
     height: 600,
-
     // Duration in millisecond
-
     duration: 1000,
-
     // Hardware acceleration
-
     acceleration: !isChrome(),
-
     // Enables gradients
-
     gradients: true,
-
     // Auto center this flipbook
-
     autoCenter: true,
-
     // Elevation from the edge of the flipbook when turning a page
-
     elevation: 50,
-
     // The number of pages
-
     pages: 20,
-
     // Events
-
     when: {
       turning: function (event, page, view) {
         var book = $(this),
           currentPage = book.turn("page"),
           pages = book.turn("pages");
-
         // Update the current URI
-
         Hash.go("page/" + page).update();
-
         // Show and hide navigation buttons
 
         disableControls(page);
@@ -72,6 +52,13 @@ function loadApp() {
 
       turned: function (event, page, view) {
         disableControls(page);
+        // Поточні сторінки
+        var updView = view.filter(function (number) {
+          return number > 0;
+        });
+        var currentPage = updView.join("-");
+
+        $(".page-count__col--current").text(currentPage);
 
         $(this).turn("center");
 
@@ -251,18 +238,18 @@ function loadApp() {
   // Events for the next button
 
   $(".next-button")
-    .bind($.mouseEvents.over, function () {
-      $(this).addClass("next-button-hover");
-    })
-    .bind($.mouseEvents.out, function () {
-      $(this).removeClass("next-button-hover");
-    })
-    .bind($.mouseEvents.down, function () {
-      $(this).addClass("next-button-down");
-    })
-    .bind($.mouseEvents.up, function () {
-      $(this).removeClass("next-button-down");
-    })
+    // .bind($.mouseEvents.over, function () {
+    //   $(this).addClass("next-button-hover");
+    // })
+    // .bind($.mouseEvents.out, function () {
+    //   $(this).removeClass("next-button-hover");
+    // })
+    // .bind($.mouseEvents.down, function () {
+    //   $(this).addClass("next-button-down");
+    // })
+    // .bind($.mouseEvents.up, function () {
+    //   $(this).removeClass("next-button-down");
+    // })
     .click(function () {
       $(".magazine").turn("next");
     });
@@ -270,18 +257,18 @@ function loadApp() {
   // Events for the next button
 
   $(".previous-button")
-    .bind($.mouseEvents.over, function () {
-      $(this).addClass("previous-button-hover");
-    })
-    .bind($.mouseEvents.out, function () {
-      $(this).removeClass("previous-button-hover");
-    })
-    .bind($.mouseEvents.down, function () {
-      $(this).addClass("previous-button-down");
-    })
-    .bind($.mouseEvents.up, function () {
-      $(this).removeClass("previous-button-down");
-    })
+    // .bind($.mouseEvents.over, function () {
+    //   $(this).addClass("previous-button-hover");
+    // })
+    // .bind($.mouseEvents.out, function () {
+    //   $(this).removeClass("previous-button-hover");
+    // })
+    // .bind($.mouseEvents.down, function () {
+    //   $(this).addClass("previous-button-down");
+    // })
+    // .bind($.mouseEvents.up, function () {
+    //   $(this).removeClass("previous-button-down");
+    // })
     .click(function () {
       $(".magazine").turn("previous");
     });

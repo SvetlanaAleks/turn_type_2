@@ -11,91 +11,107 @@
 
 <body>
 
+   <div class="wrapper">
+      <div id="canvas">
+         <div class="magazine-viewport">
+            <div class="container">
+               <div class="magazine">
+                  <!-- Next button -->
+                  <div ignore="1" class="next-button next-button-hover"></div>
+                  <!-- Previous button -->
+                  <div ignore="1" class="previous-button previous-button-hover"></div>
+               </div>
+            </div>
+         </div>
 
-   <div id="canvas">
-
-      <div class="zoom-icon zoom-icon-in"></div>
-
-      <div class="magazine-viewport">
-         <div class="container">
-            <div class="magazine">
-               <!-- Next button -->
-               <div ignore="1" class="next-button"></div>
-               <!-- Previous button -->
-               <div ignore="1" class="previous-button"></div>
+         <!-- Thumbnails -->
+         <div class="thumbnails">
+            <div>
+               <ul>
+                  <li class="i">
+                     <img src="pages/1.jpg" alt="" class="page-1">
+                     <span>1</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/2.jpg" alt="" class="page-2">
+                     <img src="pages/3.jpg" alt="" class="page-3">
+                     <span>2-3</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/4.jpg" alt="" class="page-4">
+                     <img src="pages/5.jpg" alt="" class="page-5">
+                     <span>4-5</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/6.jpg" alt="" class="page-6">
+                     <img src="pages/7.jpg" alt="" class="page-7">
+                     <span>6-7</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/8.jpg" alt="" class="page-8">
+                     <img src="pages/9.jpg" alt="" class="page-9">
+                     <span>8-9</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/10.jpg" alt="" class="page-10">
+                     <img src="pages/11.jpg" alt="" class="page-11">
+                     <span>10-11</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/12.jpg" alt="" class="page-12">
+                     <img src="pages/13.jpg" alt="" class="page-13">
+                     <span>12-13</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/14.jpg" alt="" class="page-14">
+                     <img src="pages/15.jpg" alt="" class="page-15">
+                     <span>14-15</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/16.jpg" alt="" class="page-16">
+                     <img src="pages/17.jpg" alt="" class="page-17">
+                     <span>16-17</span>
+                  </li>
+                  <li class="d">
+                     <img src="pages/18.jpg" alt="" class="page-18">
+                     <img src="pages/19.jpg" alt="" class="page-19">
+                     <span>18-19</span>
+                  </li>
+                  <li class="i">
+                     <img src="pages/20.jpg" alt="" class="page-20">
+                     <span>20</span>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!-- panel -->
+         <div class="panel">
+            <div class="panel__icon">
+               <div class="zoom-icon zoom-icon-in"></div>
+            </div>
+            <div class="panel__icon">
+               <div class="page-count">
+                  <div class="page-count__col page-count__col--current"></div>
+                  <div class="page-count__col page-count__col--all">20</div>
+               </div>
+            </div>
+            <div class="panel__icon">
+               <a href="vision_diary.pdf" download="" class="safe" title="Скачать файл">
+                  <img src="images/safe.svg" alt="">
+               </a>
             </div>
          </div>
       </div>
-
-      <!-- Thumbnails -->
-      <div class="thumbnails">
-         <div>
-            <ul>
-               <li class="i">
-                  <img src="pages/1.jpg" width="76" height="100" class="page-1">
-                  <span>1</span>
-               </li>
-               <li class="d">
-                  <img src="pages/2.jpg" width="76" height="100" class="page-2">
-                  <img src="pages/3.jpg" width="76" height="100" class="page-3">
-                  <span>2-3</span>
-               </li>
-               <li class="d">
-                  <img src="pages/4.jpg" width="76" height="100" class="page-4">
-                  <img src="pages/5.jpg" width="76" height="100" class="page-5">
-                  <span>4-5</span>
-               </li>
-               <li class="d">
-                  <img src="pages/6.jpg" width="76" height="100" class="page-6">
-                  <img src="pages/7.jpg" width="76" height="100" class="page-7">
-                  <span>6-7</span>
-               </li>
-               <li class="d">
-                  <img src="pages/8.jpg" width="76" height="100" class="page-8">
-                  <img src="pages/9.jpg" width="76" height="100" class="page-9">
-                  <span>8-9</span>
-               </li>
-               <li class="d">
-                  <img src="pages/10.jpg" width="76" height="100" class="page-10">
-                  <img src="pages/11.jpg" width="76" height="100" class="page-11">
-                  <span>10-11</span>
-               </li>
-               <li class="d">
-                  <img src="pages/12.jpg" width="76" height="100" class="page-12">
-                  <img src="pages/13.jpg" width="76" height="100" class="page-13">
-                  <span>12-13</span>
-               </li>
-               <li class="d">
-                  <img src="pages/14.jpg" width="76" height="100" class="page-14">
-                  <img src="pages/15.jpg" width="76" height="100" class="page-15">
-                  <span>13-14</span>
-               </li>
-               <li class="d">
-                  <img src="pages/16.jpg" width="76" height="100" class="page-16">
-                  <img src="pages/17.jpg" width="76" height="100" class="page-17">
-                  <span>15-16</span>
-               </li>
-               <li class="d">
-                  <img src="pages/18.jpg" width="76" height="100" class="page-18">
-                  <img src="pages/19.jpg" width="76" height="100" class="page-19">
-                  <span>17-18</span>
-               </li>
-               <li class="i">
-                  <img src="pages/20.jpg" width="76" height="100" class="page-20">
-                  <span>20</span>
-               </li>
-            </ul>
-         </div>
-      </div>
+   </div>
 
 
 
-      <script src="js/jquery.min.1.7.js"></script>
-      <script src="js/jquery-ui-1.8.20.custom.min.js"></script>
-      <script src="js/jquery.mousewheel.min.js"></script>
-      <script src="js/modernizr.2.5.3.min.js"></script>
-      <script src="js/hash.js"></script>
-      <script src="js/main.js"></script>
+   <script src="js/jquery.min.1.7.js"></script>
+   <!-- <script src="js/jquery-ui-1.8.20.custom.min.js"></script> -->
+   <!-- <script src="js/jquery.mousewheel.min.js"></script> -->
+   <script src="js/modernizr.2.5.3.min.js"></script>
+   <script src="js/hash.js"></script>
+   <script src="js/main.js"></script>
 
 </body>
 
