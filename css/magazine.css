@@ -519,9 +519,6 @@ body {
 #slider {
   display: none;
 }
-#mob {
-  display: none;
-}
 @media only screen and (max-width: 1219px) {
   .wrapper {
     width: 100%;
@@ -540,12 +537,6 @@ body {
   }
 }
 @media only screen and (max-width: 767px) {
-  #mob {
-    display: block;
-  }
-  #desc {
-    display: none;
-  }
   #canvas {
     display: none !important;
   }
