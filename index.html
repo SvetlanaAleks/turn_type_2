@@ -7,14 +7,66 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+   <style>
+      /* loader */
+      .wrapper {
+         position: relative;
+      }
 
+      #canvas {
+         position: relative;
+      }
+
+      .loader {
+         position: absolute;
+         top: 0;
+         bottom: 0;
+         right: 0;
+         left: 0;
+         background: #bebebe;
+         z-index: 100;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .loader.hide {
+         display: none;
+      }
+
+      .circular-spinner {
+         position: absolute;
+         width: 60px;
+         height: 60px;
+         border: 10px solid #e6e6e6;
+         border-top: 10px solid #f3ca1a;
+         border-radius: 50%;
+         animation: rotate 1.5s linear infinite;
+      }
+
+      @keyframes rotate {
+         from {
+            transform: rotate(0);
+         }
+
+         to {
+            transform: rotate(360deg);
+         }
+      }
+   </style>
 </head>
 
 
 <body>
 
+   <!-- loader -->
+   <div class="loader">
+      <div class="circular-spinner"></div>
+   </div>
+   <!-- loader -->
    <div class="wrapper">
       <div id="canvas">
+
          <div class="magazine-viewport">
             <div class="container">
                <div class="magazine">
@@ -106,71 +158,85 @@
             </div>
          </div>
       </div>
-      <div id="slider" class="slider">
-         <div class="slider__item">
-            <img src="pages/1.jpg" alt="">
+      <div id="slider">
+         <div class="slider">
+            <div class="slider__item">
+               <img src="pages/1.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/2.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/3.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/4.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/5.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/6.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/7.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/8.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/9.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/10.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/11.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/12.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/13.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/14.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/15.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/16.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/17.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/18.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/19.jpg" alt="">
+            </div>
+            <div class="slider__item">
+               <img src="pages/20.jpg" alt="">
+            </div>
          </div>
-         <div class="slider__item">
-            <img src="pages/2.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/3.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/4.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/5.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/6.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/7.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/8.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/9.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/10.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/11.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/12.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/13.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/14.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/15.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/16.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/17.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/18.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/19.jpg" alt="">
-         </div>
-         <div class="slider__item">
-            <img src="pages/20.jpg" alt="">
+         <div class="slides-numbers">
          </div>
       </div>
+
    </div>
 
+   <script>
+      window.onload = function () {
+         setTimeout(() => {
+            let loader = document.querySelector(".loader");
+            loaded = !0;
+            loader.classList.add("hide");
+         }, 400);
 
+      };
+   </script>
 
    <script src="js/jquery.min.1.7.js"></script>
    <script src="js/modernizr.2.5.3.min.js"></script>
