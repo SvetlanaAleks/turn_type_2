@@ -9,9 +9,7 @@ function loadApp() {
     setTimeout(loadApp, 10);
     return;
   }
-
   // Create the flipbook
-
   flipbook.turn({
     // Magazine width
     width: 922,
@@ -35,6 +33,7 @@ function loadApp() {
         var book = $(this),
           currentPage = book.turn("page"),
           pages = book.turn("pages");
+
         // Update the current URI
         Hash.go("page/" + page).update();
         // Show and hide navigation buttons

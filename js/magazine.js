@@ -46,7 +46,7 @@ function loadPage(page, pageElement) {
 
   img.attr("src", "pages/" + page + ".jpg");
 
-  loadRegions(page, pageElement);
+  // loadRegions(page, pageElement);
 }
 
 // Zoom in / Zoom out
@@ -67,13 +67,13 @@ function zoomTo(event) {
 
 // Load regions
 
-function loadRegions(page, element) {
-  $.getJSON("pages/" + page + "-regions.json").done(function (data) {
-    $.each(data, function (key, region) {
-      addRegion(region, element);
-    });
-  });
-}
+// function loadRegions(page, element) {
+//   $.getJSON("pages/" + page + "-regions.json").done(function (data) {
+//     $.each(data, function (key, region) {
+//       addRegion(region, element);
+//     });
+//   });
+// }
 
 // Add region
 
