@@ -626,8 +626,6 @@ body {
 @media only screen and (max-width: 479px) {
   .wrapper {
     padding: 10px;
-    margin-left: 15px;
-    margin-right: 15px;
   }
   .slider__item img {
     width: 100%;
